@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Пользовательское соглашение — Бюро</title>
+<meta name="description" content="Бюро: истории перед сном: спокойные аудиоистории с тихой музыкой и плавным затуханием.">
+<meta name="theme-color" content="#18261F"><link rel="icon" href="icon.png">
+<style>
+@font-face{font-family:'Cormorant';src:url(fonts/cormorant-garamond-cyrillic-500-normal.woff2) format('woff2');font-weight:500;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Cormorant';src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Inter';src:url(fonts/inter-cyrillic-400-normal.woff2) format('woff2');font-weight:400;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Inter';src:url(fonts/inter-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Inter';src:url(fonts/inter-cyrillic-600-normal.woff2) format('woff2');font-weight:600;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Inter';src:url(fonts/inter-latin-600-normal.woff2) format('woff2');font-weight:600;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Vibes';src:url(fonts/great-vibes-cyrillic-400-normal.woff2) format('woff2');font-weight:400;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Vibes';src:url(fonts/great-vibes-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--bg:#E9DFCE;--surface:#F1E9DB;--ink:#1E2421;--soft:#3D3A35;--muted:#5E5A52;--line:#CDBFA8;--accent:#BF6A3D;--accentInk:#9A4A26;--night:#18261F}
+@media (prefers-color-scheme:dark){:root{--bg:#18261F;--surface:#22332B;--ink:#E9DFCE;--soft:#CFC6B6;--muted:#A39C8E;--line:#2E4038;--accent:#E2A574;--accentInk:#E2A574}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accentInk)}
+header{max-width:760px;margin:0 auto;padding:28px 24px 0;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font:500 24px Cormorant,serif}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:18px}
+nav a:hover{color:var(--ink)}
+main{max-width:760px;margin:0 auto;padding:24px 24px 64px}
+h1{font:500 44px/1.05 Cormorant,serif;margin:24px 0 8px}
+h2{font:500 28px/1.15 Cormorant,serif;margin:36px 0 8px;padding-top:12px;border-top:1px solid var(--line)}
+p,li{color:var(--soft)}
+table{border-collapse:collapse;width:100%}
+td,th{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+footer{max-width:760px;margin:0 auto;padding:24px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--muted);margin-right:14px}
+.hero{min-height:72vh;display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:72px;margin:12px 0 0}
+.slogan{font:400 40px/1.2 Vibes,cursive;color:var(--accentInk);margin:8px 0 0}
+.lead{font-size:18px;max-width:520px}
+.stores{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.store{padding:12px 20px;border-radius:24px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;font-size:15px}
+.soon{color:var(--muted);font-size:13px;margin-top:10px}
+</style></head><body>
+<header><a class="brand" href="index.html"><svg width="20" height="20" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 35 65 47 100 50C65 53 53 65 50 100C47 65 35 53 0 50C35 47 47 35 50 0Z" fill="var(--accent)"/></svg>Бюро</a><nav><a href="support.html">Поддержка</a><a href="privacy.html">Конфиденциальность</a></nav></header>
+<main><h1>Пользовательское соглашение</h1>
+<p>Редакция от 17.11.2026</p>
+<h2>1. Стороны и предмет</h2>
+<p>1.1. Настоящее Соглашение заключается между индивидуальным предпринимателем Гудис Игорь Геннадьевич (ИНН 745308409456, ОГРНИП 325745600160458) (далее — Правообладатель) и лицом, использующим мобильное приложение «Бюро» (далее — Пользователь, Приложение).</p>
+<p>1.2. Правообладатель предоставляет Пользователю возможность прослушивать аудиоистории и пользоваться функциями Приложения на условиях Соглашения.</p>
+<p>1.3. Начиная использовать Приложение, Пользователь принимает Соглашение полностью. Если Пользователь не согласен с ним, он должен прекратить использование Приложения.</p>
+<h2>2. Аккаунт</h2>
+<p>2.1. Часть историй доступна без регистрации. Для доступа ко всей библиотеке и сохранения прогресса на разных устройствах нужна регистрация по номеру телефона или через VK ID / Яндекс ID.</p>
+<p>2.2. Регистрироваться могут лица, достигшие 18 лет. Дети пользуются Приложением под присмотром взрослых.</p>
+<p>2.3. Пользователь отвечает за сохранность доступа к своему аккаунту и за действия, совершённые с его использованием.</p>
+<p>2.4. Пользователь может в любой момент удалить аккаунт: «Настройки → Удалить аккаунт».</p>
+<h2>3. Права на контент</h2>
+<p>3.1. Истории, озвучка, музыка, тексты, изображения и дизайн Приложения охраняются законом. Права принадлежат Правообладателю или используются им на законных основаниях.</p>
+<p>3.2. Пользователю предоставляется простая неисключительная лицензия на прослушивание контента в Приложении для личных некоммерческих целей на срок использования Приложения, на территории всего мира, безвозмездно (для платного контента — на срок оплаченной подписки).</p>
+<p>3.3. Запрещается копировать, записывать, распространять, публично исполнять и иным образом использовать контент вне Приложения без письменного разрешения Правообладателя.</p>
+<h2>4. Платные функции</h2>
+<p>4.1. Сейчас Приложение бесплатно. Если в будущем появится платная подписка, её условия, стоимость и порядок отмены будут опубликованы отдельно до начала продаж, а бесплатные на тот момент возможности не будут отключены без предупреждения.</p>
+<h2>5. Правила использования</h2>
+<p>Пользователь обязуется не нарушать работу Приложения, не пытаться получить несанкционированный доступ к данным и серверам, не использовать автоматизированные средства для массового скачивания контента, не отправлять через раздел обращений оскорбительные, ложные или незаконные материалы.</p>
+<h2>6. Обращения и жалобы</h2>
+<p>6.1. Сообщить о проблеме с историей или Приложением можно в разделе «Настройки → Сообщить о проблеме» или по адресу support@buro.family.</p>
+<p>6.2. Правообладатель рассматривает обращения в течение 10 рабочих дней и вправе по итогам изменить или снять историю с публикации.</p>
+<h2>7. Ответственность</h2>
+<p>7.1. Приложение предоставляется «как есть». Правообладатель стремится к его бесперебойной работе, но не гарантирует отсутствие перерывов, в том числе из-за технических работ и обстоятельств, от него не зависящих.</p>
+<p>7.2. Приложение не является медицинским средством и не предназначено для лечения нарушений сна.</p>
+<p>7.3. Правообладатель не несёт ответственности за убытки, вызванные невозможностью использования Приложения, за исключением случаев, предусмотренных законом.</p>
+<h2>8. Персональные данные</h2>
+<p>Обработка персональных данных регулируется Политикой обработки персональных данных (https://buro.family/privacy.html) и осуществляется на основании отдельного согласия Пользователя (https://buro.family/consent.html).</p>
+<h2>9. Изменение Соглашения</h2>
+<p>Правообладатель вправе изменять Соглашение. Новая редакция вступает в силу с момента публикации на Сайте https://buro.family. Продолжая использовать Приложение после изменений, Пользователь принимает новую редакцию.</p>
+<h2>10. Применимое право и споры</h2>
+<p>Соглашение регулируется законодательством Российской Федерации. Споры решаются путём переговоров, а при недостижении согласия — в суде по месту нахождения Правообладателя, если иное не предусмотрено законодательством о защите прав потребителей.</p>
+<h2>11. Реквизиты</h2>
+<p>ИП Гудис И. Г., ИНН 745308409456, ОГРНИП 325745600160458, г. Челябинск, support@buro.family.</p></main><footer><a href="terms.html">Пользовательское соглашение</a><a href="privacy.html">Политика обработки ПДн</a><a href="consent.html">Согласие на обработку ПДн</a><a href="delete-account.html">Удаление аккаунта</a><p>ИП Гудис И. Г., ИНН 745308409456, ОГРНИП 325745600160458 · <a href="mailto:support@buro.family">support@buro.family</a></p></footer></body></html>
