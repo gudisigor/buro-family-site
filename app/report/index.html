@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Бюро — слушать в браузере</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+    <meta name="description" content="Бюро — спокойные аудиоистории перед сном. Слушайте в браузере.">
+    <meta name="theme-color" content="#18261F">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <style id="buro-web">
+      /* На компьютере приложение показывается колонкой шириной с телефон, по центру. */
+      html { background: #0F1914; }
+      body { max-width: 480px; margin: 0 auto; position: relative; transform: translateZ(0); overflow: hidden; }
+      @media (min-width: 520px) { body { box-shadow: 0 0 60px rgba(0,0,0,.45); } }
+    </style>
+  <link rel="icon" href="/app/favicon.ico"/></head>
+
+  <body>
+    <noscript>Чтобы слушать истории, включите JavaScript в браузере.</noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  <script src="/app/_expo/static/js/web/__expo-metro-runtime-8c088df87a31e4e6accd81c554ec290d.js" defer></script><script src="/app/_expo/static/js/web/__common-df8b0eb6f9fc59d3fe35722f48d81b72.js" defer></script><script src="/app/_expo/static/js/web/entry-6991ecfbb050db804455d21c1ada30b4.js" defer></script>
+</body>
+</html>

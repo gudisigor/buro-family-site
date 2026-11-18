@@ -36,6 +36,25 @@ footer a{color:var(--muted);margin-right:14px}
 .stores{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .store{padding:12px 20px;border-radius:24px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;font-size:15px}
 .soon{color:var(--muted);font-size:13px;margin-top:10px}
+.listen{display:inline-block;margin-top:28px;padding:15px 28px;border-radius:28px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600;font-size:16px}
+.listen:hover{opacity:.9}
+.hero{min-height:62vh}
+@media (max-width:640px),(hover:none){.qr-hint{display:none}}
+
+.qr-cards{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}
+.qr-card{display:flex;flex-direction:column;align-items:center;gap:2px;padding:14px 14px 12px;border-radius:22px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;min-width:150px}
+.qr-card:hover{border-color:var(--accent)}
+.qr{display:flex;align-items:center;justify-content:center;margin-bottom:8px;border-radius:12px;overflow:hidden;line-height:0}
+.qr-empty{width:148px;height:148px;background:var(--bg);color:var(--muted);font-size:13px;line-height:1;border:1px dashed var(--line)}
+.qr-name{font-weight:600;font-size:15px}
+.qr-sub{color:var(--muted);font-size:12px}
+.soon-card{opacity:.75}
+@media (max-width:640px),(hover:none){
+ .qr-cards{gap:10px}
+ .qr-card{flex-direction:row;gap:10px;padding:12px 18px;min-width:0;border-radius:24px}
+ .qr{display:none}
+ .qr-sub{display:none}
+}
 </style></head><body>
 <header><a class="brand" href="index.html"><svg width="20" height="20" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 35 65 47 100 50C65 53 53 65 50 100C47 65 35 53 0 50C35 47 47 35 50 0Z" fill="var(--accent)"/></svg>Бюро</a><nav><a href="support.html">Поддержка</a><a href="privacy.html">Конфиденциальность</a></nav></header>
 <main><h1>Пользовательское соглашение</h1>
