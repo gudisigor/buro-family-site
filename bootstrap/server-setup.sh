@@ -16,15 +16,23 @@ echo "== bootstrap $(date -Is)"
 REPO="git@github.com:gudisigor/buro-server.git"
 export DEBIAN_FRONTEND=noninteractive
 
-apt-get update -y
-apt-get install -y ca-certificates curl gnupg git ufw postgresql debian-keyring debian-archive-keyring apt-transport-https
+# Свежий сервер сам обновляется при первом запуске: ждём, пока apt освободится.
+command -v cloud-init >/dev/null && cloud-init status --wait >/dev/null 2>&1 || true
+for i in $(seq 1 180); do
+  pgrep -x 'apt|apt-get|dpkg|unattended-upgr' >/dev/null || break
+  [ "$i" = 1 ] && echo "Жду завершения автообновления системы..."
+  sleep 5
+done
+APT="apt-get -o DPkg::Lock::Timeout=900"
+$APT update -y
+$APT install -y ca-certificates curl gnupg git ufw postgresql debian-keyring debian-archive-keyring apt-transport-https
 
 # Node.js 24 (NodeSource) и Caddy (официальный репозиторий) — Caddy сам получает сертификаты HTTPS.
 curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
 curl -1sLf https://dl.cloudsmith.io/public/caddy/stable/gpg.key | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
 curl -1sLf https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt > /etc/apt/sources.list.d/caddy-stable.list
-apt-get update -y
-apt-get install -y nodejs caddy
+$APT update -y
+$APT install -y nodejs caddy
 
 # Брандмауэр: только SSH и веб.
 ufw allow 22/tcp; ufw allow 80/tcp; ufw allow 443/tcp; ufw --force enable
