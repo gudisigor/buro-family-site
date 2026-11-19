@@ -18,8 +18,8 @@ export DEBIAN_FRONTEND=noninteractive
 
 # Свежий сервер сам обновляется при первом запуске: ждём, пока apt освободится.
 command -v cloud-init >/dev/null && cloud-init status --wait >/dev/null 2>&1 || true
-for i in $(seq 1 180); do
-  pgrep -x 'apt|apt-get|dpkg|unattended-upgr' >/dev/null || break
+for i in $(seq 1 60); do
+  pgrep -x 'apt|apt-get|dpkg' >/dev/null || break
   [ "$i" = 1 ] && echo "Жду завершения автообновления системы..."
   sleep 5
 done
