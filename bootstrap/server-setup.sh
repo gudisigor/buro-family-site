@@ -23,6 +23,10 @@ for i in $(seq 1 60); do
   [ "$i" = 1 ] && echo "Жду завершения автообновления системы..."
   sleep 5
 done
+# Зеркало Ubuntu в России (archive.ubuntu.com отсюда отвечает медленно).
+for f in /etc/apt/sources.list.d/ubuntu.sources /etc/apt/sources.list; do
+  [ -f "$f" ] && sed -i -E 's#https?://([a-z]+\.)?(archive|security)\.ubuntu\.com/ubuntu/?#http://mirror.yandex.ru/ubuntu/#g' "$f"
+done
 APT="apt-get -o DPkg::Lock::Timeout=900"
 $APT update -y
 $APT install -y ca-certificates curl gnupg git ufw postgresql debian-keyring debian-archive-keyring apt-transport-https
