@@ -26,6 +26,7 @@ done
 # Зеркало Ubuntu в России (archive.ubuntu.com отсюда отвечает медленно).
 for f in /etc/apt/sources.list.d/ubuntu.sources /etc/apt/sources.list; do
   [ -f "$f" ] && sed -i -E 's#https?://([a-z]+\.)?(archive|security)\.ubuntu\.com/ubuntu/?#http://mirror.yandex.ru/ubuntu/#g' "$f"
+  true
 done
 APT="apt-get -o DPkg::Lock::Timeout=900"
 $APT update -y
