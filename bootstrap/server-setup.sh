@@ -10,6 +10,7 @@
 #
 # Дальше всё, что лежит в репозитории в deploy/apply.sh, выполняется после каждого обновления кода.
 set -euo pipefail
+umask 022
 exec > >(tee -a /var/log/buro-bootstrap.log) 2>&1
 echo "== bootstrap $(date -Is)"
 
@@ -88,7 +89,7 @@ status() {
 </body>
 HTML
 }
-mkdir -p /var/www/status /opt/buro
+mkdir -p /var/www/status /opt/buro; chmod 755 /var/www /var/www/status
 chown buro:buro /opt/buro
 if [ ! -d "$APP/.git" ]; then
   if sudo -u buro git clone -q "$REPO" "$APP" 2>/tmp/buro-clone.err; then
